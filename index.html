@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --accent: #2f6fed;
+      --border: #e5e7eb;
+      --max-width: 1100px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.05);
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* NAVBAR */
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      background: rgba(247,248,250,0.8);
+      border-bottom: 1px solid rgba(229,231,235,0.7);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .menu a {
+      color: var(--muted);
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .menu a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 5rem 0 4rem;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 3rem;
+      align-items: center;
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin-bottom: 1.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      background: #eef2ff;
+      color: var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background: #dde7ff;
+    }
+
+    /* NEWS */
+
+    section {
+      padding-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.04em;
+    }
+
+    .news-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .news-item {
+      background: var(--surface);
+      padding: 1.4rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .news-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .news-date {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .news-item h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .news-item p {
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Your Name</div>
+
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="cv.html">CV</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+
+          <!-- Replace with your own image -->
+          <img src="profile.jpg" alt="Profile Photo" />
+
+          <div class="hero-text">
+            <h1>Lilly Schwarzenbach</h1>
+
+            <p>
+              Welcome! Being a curious individual, I work as a scientific programmer and lab manager for the Computational Intelligence Group and Social AI Group at the VU Amsterdam. This gives me the opportunity to flex my problem solving muscles in a variety of robotics subdomains by supporting research, education and the general running of two labs.
+              As such and in my spare time, I have the privilege to conduct research in a variety of directions such as swarm robotics, robot learning, co-optimization or robot design and behaviour as well as evolutionary robotics. 
+              In addition, I also conduct my own research in swarm robotics with a focus on collective navigation and response with the ultimate goal of deploying a robot swarm in a disaster situation. Swarm robotics and other multi-agent systems fascinate me because "the more, the merrier" also applies to robots and a swarm can solve problems individuals struggle with.
+            </p>
+
+            <div class="buttons">
+              <a class="btn btn-primary" href="publications.html">
+                Publications
+              </a>
+
+              <a class="btn btn-secondary" href="cv.html">
+                CV
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS SECTION -->
+
+    <section>
+      <div class="container">
+
+        <h2 class="section-title">News</h2>
+
+        <div class="news-grid">
+
+          <article class="news-item">
+            <div class="news-date">May 2026</div>
+            <h3>Accepted to MRS Summer Schhol 2026</h3>
+            <p>
+              I've been accepted to the 2026 IEEE RAS Summer School on Multi-Robot Systems.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+      © 2026 Lilly Schwarzenbach · Built with GitHub Pages
+    </div>
+  </footer>
+
+</body>
+</html>
